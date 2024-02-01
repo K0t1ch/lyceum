@@ -68,30 +68,42 @@ while running:
             # ------------------------------------------------------------
 
             elif event.key == pygame.K_UP:
-                shir += 0.001
-                print(mash_x, mash_y)
-                draw(mash_x, mash_y, dolg, shir)
-                pygame.display.flip()
+                if shir + 0.001 > 52.1:
+                    pass
+                else:
+                    shir += 0.001
+                    print(shir)
+                    draw(mash_x, mash_y, dolg, shir)
+                    pygame.display.flip()
 
             elif event.key == pygame.K_DOWN:
-                shir -= 0.001
-                print(mash_x, mash_y)
-                draw(mash_x, mash_y, dolg, shir)
-                pygame.display.flip()
+                if shir - 0.001 < 51.1:
+                    pass
+                else:
+                    shir -= 0.001
+                    print(shir)
+                    draw(mash_x, mash_y, dolg, shir)
+                    pygame.display.flip()
 
             # ------------------------------------------------------------
 
             elif event.key == pygame.K_LEFT:
-                dolg -= 0.001
-                print(mash_x, mash_y)
-                draw(mash_x, mash_y, dolg, shir)
-                pygame.display.flip()
+                if dolg - 0.001 < -15.1:
+                    pass
+                else:
+                    dolg -= 0.001
+                    print(dolg)
+                    draw(mash_x, mash_y, dolg, shir)
+                    pygame.display.flip()
 
             elif event.key == pygame.K_RIGHT:
-                dolg += 0.001
-                print(mash_x, mash_y)
-                draw(mash_x, mash_y, dolg, shir)
-                pygame.display.flip()
+                if dolg + 0.001 > 0.01:
+                    pass
+                else:
+                    dolg += 0.001
+                    print(dolg)
+                    draw(mash_x, mash_y, dolg, shir)
+                    pygame.display.flip()
 
 
 pygame.quit()
