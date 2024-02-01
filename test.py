@@ -44,7 +44,7 @@ while running:
             running = False
 
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_PAGEUP:
                 if mash_x - 0.001 < 0.0:
                     pass
                 else:
@@ -54,7 +54,7 @@ while running:
                     draw(mash_x, mash_y)
                     pygame.display.flip()
 
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_PAGEDOWN:
                 if mash_x + 0.001 > 0.008:
                     pass
                 else:
